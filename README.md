@@ -45,6 +45,6 @@ randomly generated password is displayed on the screen.
 
 ## Screenshot
 
-![Screenshot of website]()
+![Screenshot of website](https://github.com/ryangautier1/03-Password-Generator/blob/master/Screenshot.png?raw=true)
 
 The html and css files for this application were provided by to me by Trilogy Education Services
