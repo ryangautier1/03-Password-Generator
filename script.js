@@ -8,13 +8,20 @@ function generatePassword() {
   while (isInvalid) {
     var passLength = prompt("How many characters would you like in your password? (Must be between 8 and 128)");
     
+    // Checking if user hits cancel
+    if (passLength === null){
+      isInvalid = false;
+      return "You hit cancel!";
+    }
+
     // Convert input to number
     passLength = Number(passLength);
 
-    // Condition to end the function if user hits cancel. Number.isNaN(passlength) will return true if the user entered any characters other than numbers
-    if (passLength !== null) {
-      if (passLength < 8 || passLength > 128 || Number.isNaN(passLength)) {
-        alert("Your input must be a number between 8 and 128.");
+    // Number.isNaN(passlength) will return true if the user entered any characters other than numbers
+    // passLength % 1 checks if the number is a whole number
+    if (passLength !== false) {
+      if (passLength < 8 || passLength > 128 || Number.isNaN(passLength) || passLength % 1 !== 0) {
+        alert("Your input must be a whole number between 8 and 128.");
       }
       else {
         isInvalid = false;
